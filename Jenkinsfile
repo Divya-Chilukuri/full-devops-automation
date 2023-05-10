@@ -41,7 +41,7 @@ environment {
   label 'k8s'
   } 
     steps {
-      checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Divya-Chilukuri/full-devops-automation.git']])
+      checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Divya-Chilukuri/full-devops-automation.git']])
       sh 'kubectl apply -f deployment.yml'
       sh 'kubectl apply -f service.yml'
     }
